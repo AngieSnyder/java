@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class TestScoreApp {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
         // display operational messages
         System.out.println("Enter test scores that range from 0 to 100.");
         System.out.println("To end the program, enter 999.");
@@ -25,13 +25,18 @@ public class TestScoreApp {
             if (testScore <= 100) {
                 scoreCount = scoreCount + 1;
                 scoreTotal = scoreTotal + testScore;
-            }else if (testScore >100) {
+            }
+            else if (testScore != 999) {
             	System.out.println("Invalid entry; not counted");
-            }           
+            }                     
         }
 
         // display the score count, score total, and average score
-        double averageScore = (double) scoreTotal / scoreCount;
+        //double averageScore = (double) scoreTotal / scoreCount;
+        double averageScore = 0.0;
+        if (scoreCount> 0 ) {
+        	averageScore = (double) scoreTotal / scoreCount;
+        }
         String message = "\n"
                 + "Score count:   " + scoreCount + "\n"
                 + "Score total:   " + scoreTotal + "\n"
