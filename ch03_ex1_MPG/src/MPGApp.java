@@ -3,7 +3,9 @@ import java.util.Scanner;
 
 public class MPGApp {
 
-    public static void main(String[] args) {
+    private static double mpg;
+
+	public static void main(String[] args) {
         System.out.println("Welcome to the Miles Per Gallon calculator");
         System.out.println();  // print a blank line
         
@@ -33,7 +35,6 @@ public class MPGApp {
     }
 
 	private static double getNumberInstance() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
     
