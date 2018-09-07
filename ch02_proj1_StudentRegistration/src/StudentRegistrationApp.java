@@ -35,7 +35,7 @@ public class StudentRegistrationApp {
 		System.out.println("Your temporary password is: " + password);
 
 		//
-
+		sc.close();
 	}
 
 }

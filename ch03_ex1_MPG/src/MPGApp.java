@@ -7,7 +7,7 @@ public class MPGApp {
         System.out.println("Welcome to the Miles Per Gallon calculator");
         System.out.println();  // print a blank line
         
-        @SuppressWarnings("resource")
+        //@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
         
         String choice = "y";
@@ -28,6 +28,7 @@ public class MPGApp {
             System.out.print("Calculate another MPG? (y/n): ");
             choice = sc.next();
             System.out.println();
+            sc.close();
         }
     }
 
