@@ -45,7 +45,7 @@ public class GuessingGameApp {
 							correctGuess = true;
 						}
 					}
-					//use the counter to determing the correct message to display
+					//use the counter to determining the correct message to display
 					if (counter <= 3) {
 						System.out.println("Great work you are a mathimatical wizard.");
 					}
@@ -63,6 +63,7 @@ public class GuessingGameApp {
 		
 		System.out.println();
 		System.out.println("Bye - Come back soon!");
+		sc.close();
 
 	}
 	// Generate a random # between 1 and 100
@@ -100,6 +101,6 @@ public class GuessingGameApp {
 			}
 		}
 		return n;
-		
 	}
+	
 }

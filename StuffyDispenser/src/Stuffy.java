@@ -42,7 +42,7 @@ public class Stuffy {
 		color = inColor;
 	}
 
-	@Override
+	//@Override
 	public String toString() {
 		return "Stuffy [id=" + id + ", name=" + name + ", type=" + type + ", color=" + color + "]";
 	}

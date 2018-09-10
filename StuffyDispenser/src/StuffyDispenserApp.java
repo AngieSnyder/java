@@ -8,18 +8,18 @@ public class StuffyDispenserApp {
 		System.out.println("Create a new Stuffy...");
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Enter stuffy name:");
+		System.out.print("Enter stuffy name: ");
 		String name = sc.next();
 		
-		System.out.print("Enter stuffy type (Bear, Monkey, ect):");
+		System.out.print("Enter stuffy type (Bear, Monkey, ect): ");
 		String type = sc.next();
 		
-		System.out.print("Enter stuffy color:");
+		System.out.print("Enter stuffy color: ");
 		String color = sc.next();
 		
 		Stuffy myStuffy = new Stuffy(name, type, color);
 		
-		System.out.println("New Stuffy:"+myStuffy);
+		System.out.println("New Stuffy: "+myStuffy);
 		
 		sc.close();
 		System.out.println("Bye!");
