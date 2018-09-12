@@ -37,18 +37,10 @@ public class Product {
         this.price = price;
     }
 
-   // public double getPrice() {
-   //     return price;
-   // }
     public String getPrice() {
         NumberFormat number = NumberFormat.getNumberInstance();
         number.setMinimumFractionDigits(2);
         number.setMaximumFractionDigits(2);
         return number.format(price);
     }
-
-//    public String getPriceFormatted() {
-//        NumberFormat currency = NumberFormat.getCurrencyInstance();
-//        return currency.format(price);
-//    }
 }

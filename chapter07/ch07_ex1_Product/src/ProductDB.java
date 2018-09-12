@@ -13,9 +13,6 @@ public class ProductDB {
         product.setCode(productCode);
         if (productCode.equalsIgnoreCase("java")) {
                product = new Product("java","Murach's Java Programming", 57.50);
-      //if (productCode.equalsIgnoreCase("java")) {    	
-            //product.setDescription("Murach's Java Programming");
-            //product.setPrice(57.50);
         } else if (productCode.equalsIgnoreCase("jsp")) {
             product.setDescription("Murach's Java Servlets and JSP");
             product.setPrice(57.50);
