@@ -1,15 +1,19 @@
+package ui;
+
 import java.text.NumberFormat;
+
+import business.*;
+import util.Console;
 
 public class AccountBalanceApp {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to the Account Balance Calculator");
 		NumberFormat cf = NumberFormat.getCurrencyInstance();
-
 		System.out.println("Starting balances: ");
 		CheckingAccount ca = new CheckingAccount(1000);
 		SavingsAccount sa = new SavingsAccount(1000);
-
+		
 		System.out.println("Checking: " + cf.format(ca.getBalance()));
 		System.out.println("Savings: " + cf.format(sa.getBalance()));
 
@@ -34,7 +38,7 @@ public class AccountBalanceApp {
 			else if (transType.equalsIgnoreCase("d"))
 				acct.deposit(amount);
 
-			choice = Console.getString("Continue? ", "y", "n");
+			choice = Console.getString("Continue? (y/n) ", "y", "n");
 		}
 
 		sa.applyInterestPayment();
