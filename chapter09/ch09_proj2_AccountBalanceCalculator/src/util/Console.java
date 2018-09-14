@@ -1,32 +1,40 @@
 package util;
+
 import java.util.Scanner;
 
 public class Console {
-    
-    private static Scanner sc = new Scanner(System.in);
 
-    public static String getString(String prompt) {
-        System.out.print(prompt);
-        String s = sc.next();  // read user entry
-        sc.nextLine();  // discard any other data entered on the line
-        return s;
-    }
-    
-    public static String getString(String prompt, String v1, String v2) {
-    	System.out.print(prompt);
+	private static Scanner sc = new Scanner(System.in);
+
+	public static String getString(String prompt) {
     	boolean isValid = false;
     	String s = "";
     	while (!isValid) {
-    		s = getString(prompt);
-    		if (s.equalsIgnoreCase(v1)|| s.equalsIgnoreCase(v2)) {
-    			isValid = true;
-    		}
-    		else {
-    			System.out.println("Error! Entry must be 'y' or 'n'. Try again.");
-    		}
-    		sc.nextLine();
+            System.out.print(prompt);
+            s = sc.nextLine();  // read user entry
+            if (s.equals("")) {
+            	System.out.println("Error!  This entry is required!");
+            }
+            else {
+            	isValid = true;
+            }
     	}
-       return s;
+        return s;
+    }
+
+    public static String getString(String prompt, String v1, String v2) {
+        boolean isValid = false;
+        String s = "";
+        while (!isValid) {
+            s = getString(prompt);  // read user entry
+	        if (s.equalsIgnoreCase(v1) || s.equalsIgnoreCase(v2)) {
+	        	isValid = true;
+	        }
+	        else {
+	        	System.out.println("Error! Entry must be 'y' or 'n'. Try again.");
+	        }
+        }
+        return s;
     }
 
     public static int getInt(String prompt) {

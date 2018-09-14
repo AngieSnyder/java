@@ -21,10 +21,11 @@ public class AccountBalanceApp {
 
 		String choice = "y";
 		while (choice.equalsIgnoreCase("y")) {
-
-			String transType = Console.getString("Withdraw or Deposit (w/d)? ", "w", "d");
-			String acctType = Console.getString("Checking or Savings (c/s)? ", "c", "s");
-
+			
+			String transType = Console.getString("Withdraw or Deposit (w/d)?",
+					"w", "d");
+			String acctType = Console.getString("Checking or Savings?",
+					"c", "s");
 			double amount = Console.getDouble("Amount?", 0, Double.POSITIVE_INFINITY);
 
 			Account acct = null;
