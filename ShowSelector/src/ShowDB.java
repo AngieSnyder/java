@@ -3,52 +3,76 @@ public class ShowDB {
 	
 	//This method will get an instance of Show for the searchCriteria and 
 	// searchValue
-	public static Show getShow(String sCriteria, String sValue) {
-		Show s = null;
-		
+	public static Show[] getShow(String sCriteria, String sValue) {
+		Show[] shows= null;
+		// methods that go through the user choices
 		if (sCriteria.equalsIgnoreCase("g")) {// genre
 			if (sValue.equalsIgnoreCase("comedy")) {
-				s = new Show("Seinfeld", "comedy", 30, "Netflix")
+				shows = new Show[1];
+				Show s = new Show("Seinfeld", "comedy", 30, "Netflix");
+				shows[0] = s;
 			}
 			else if (sValue.equalsIgnoreCase("drama")) {
-				s = new Show("West Wing", "drama", 60, "ABC")
+				shows = new Show[1];
+				Show s = new Show("West Wing", "drama", 60, "ABC");
+				shows[0] = s;
 			}
 			else if (sValue.equalsIgnoreCase("sci-fi")) {
-				s = new Show("Star Trek", "sci-fi", 6`0, "Hulu")
+				shows = new Show[1];
+				Show s = new Show("Star Trek", "sci-fi", 60, "Hulu");
+				shows[0] = s;
+						
 			}
 			else if (sValue.equalsIgnoreCase("reality")) {
-				s = new Show("Survivor", "reality", 30, "CBS")
+				shows = new Show[1];
+				Show s = new Show("Survivor", "reality", 90, "CBS");
+				shows[0] = s;
 			}
 		}
 		else if (sCriteria.equalsIgnoreCase("l")) {// length
-			if (sValue.equalsIgnoreCase("comedy")) {
-				s = new Show("Seinfeld", "comedy", 30, "Netflix")
+			if (sValue.equalsIgnoreCase("30")) {
+				shows = new Show[1];
+				Show s = new Show("Seinfeld", "comedy", 30, "Netflix");
+				shows[0] = s;
 			}
-			else if (sValue.equalsIgnoreCase("drama")) {
-				s = new Show("West Wing", "drama", 60, "ABC")
+			else if (sValue.equalsIgnoreCase("60")) {
+				shows = new Show[1];
+				Show s1= new Show("West Wing", "drama", 60, "ABC");
+				Show s2 = new Show("Star Trek", "sci-fi", 60, "Hulu");
+				shows[0] = s1;
+				shows[1] = s2;
 			}
-			else if (sValue.equalsIgnoreCase("sci-fi")) {
-				s = new Show("Star Trek", "sci-fi", 6`0, "Hulu")
-			}
-			else if (sValue.equalsIgnoreCase("reality")) {
-				s = new Show("Survivor", "reality", 30, "CBS")
+			else if (sValue.equalsIgnoreCase("90")) {
+				shows = new Show[1];
+				Show s = new Show("Survivor", "reality", 90, "CBS");
+				shows[0] = s;
 			}
 		}
 		else if (sCriteria.equalsIgnoreCase("n")) {// network
-			if (sValue.equalsIgnoreCase("comedy")) {
-				s = new Show("Seinfeld", "comedy", 30, "Netflix")
+			if (sValue.equalsIgnoreCase("Netflix")) {
+				shows = new Show[1];
+				Show s = new Show("Seinfeld", "comedy", 30, "Netflix");
+				shows[0] = s;
 			}
-			else if (sValue.equalsIgnoreCase("drama")) {
-				s = new Show("West Wing", "drama", 60, "ABC")
+			else if (sValue.equalsIgnoreCase("ABC")) {
+				shows = new Show[1];
+				Show s = new Show("West Wing", "drama", 60, "ABC");
+				shows[0] = s;
 			}
-			else if (sValue.equalsIgnoreCase("sci-fi")) {
-				s = new Show("Star Trek", "sci-fi", 6`0, "Hulu")
+			else if (sValue.equalsIgnoreCase("Hulu")) {
+				shows = new Show[1];
+				Show s = new Show("Star Trek", "sci-fi", 60, "Hulu");
+				shows[0] = s;
+						
 			}
-			else if (sValue.equalsIgnoreCase("reality")) {
-				s = new Show("Survivor", "reality", 30, "CBS")
+			else if (sValue.equalsIgnoreCase("CBS")) {
+				shows = new Show[1];
+				Show s = new Show("Survivor", "reality", 90, "CBS");
+				shows[0] = s;
 			}
+			
 		}
-		return s;
+		return shows;
 	}
 	
 }
