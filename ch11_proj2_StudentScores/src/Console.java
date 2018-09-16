@@ -13,7 +13,7 @@ public class Console {
             System.out.print(prompt);
             s = sc.nextLine();  // read user entry
             if (s.equals("")) {
-            	System.out.println("Error!  This entry is required!");
+            	System.out.println("Error!  This entry is required! Try again.");
             }
             else {
             	isValid = true;
