@@ -6,8 +6,14 @@ public class PersonManagerApp {
 		System.out.println("Welcome to the Person Manager");
 		System.out.println();
 		
+		Console.getString("Create customer or employee? (c/e): ");		
+		String command = "";
+		while (!command.equalsIgnoreCase(" ")) {
+		}
 		
-			System.out.println("Create customer or employee? (c/e): ");
-			
+		Console.getString("First Name: ");
+		Console.getString("Last Name: ");
+		Console.getString("Customer Number: ");
+		Console.getString("SSN: ");
 	}
 }
