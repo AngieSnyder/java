@@ -1,14 +1,27 @@
 
-public class Person {
+public abstract class Person {
+	public String firstName;
+	public String lastName;
 	
-	public Person(String first, String last);
-	public String getFirstName();
-	public void setFirstName(String first);
-	public String getLastName();
-	public void setLastName(String last);
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 	@Override
 	public String toString() {
-		return "Person [getFirstName()=" + getFirstName() + ", getLastName()=" + getLastName() + "]";
+		return "Name: " + firstName + " " + lastName ;
 	}
+	
+	
+}
+	
 	
 	

@@ -1,23 +1,24 @@
 
 public class Employee extends Person {
-	
-	private String socialSecurityNumber;
+	public String ssn;
 
-	public Employee(String firstName, String lastName, String socialSecurityNumber) {
-		super(firstName, lastName);
-		this.socialSecurityNumber = socialSecurityNumber;
+	public Employee(String ssn) {
+		super();
+		this.ssn = ssn;
 	}
 
-	public String getSocialSecurityNumber() {
-		return socialSecurityNumber;
+	public String getSsn() {
+		return ssn;
 	}
 
-	public void setSocialSecurityNumber(String socialSecurityNumber) {
-		this.socialSecurityNumber = socialSecurityNumber;
+	public void setSsn(String ssn) {
+		this.ssn = ssn;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [socialSecurityNumber=" + socialSecurityNumber + "]";
+		return "Name: [firstName=" + firstName + ", lastName=" + lastName + " ssn=\" + ssn]";
 	}
+	
+	
 }
