@@ -1,9 +1,9 @@
 
 public class Employee extends Person {
-	public String ssn;
+	private String ssn;
 
-	public Employee(String ssn) {
-		super();
+	public Employee(String firstName, String lastName, String ssn) {
+		super(firstName, lastName);
 		this.ssn = ssn;
 	}
 
@@ -17,7 +17,7 @@ public class Employee extends Person {
 
 	@Override
 	public String toString() {
-		return "Name: [firstName=" + firstName + ", lastName=" + lastName + " ssn=\" + ssn]";
+		return super.toString() + "\n" + "SSN: " + ssn +"\n";
 	}
 	
 	
