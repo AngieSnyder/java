@@ -7,8 +7,8 @@ public class Alligator extends Animal {
 
 	@Override
 	public void incrementCount() {
-		setCount(getCount()+1);
-		
+		setCount(getCount() + 1);
+
 	}
 
 	@Override
@@ -24,7 +24,7 @@ public class Alligator extends Animal {
 
 	@Override
 	public String getCountString() {
-		return getCount()+" alligator";
+		return getCount() + " alligator";
 	}
 
 }
