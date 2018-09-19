@@ -1,0 +1,52 @@
+import java.util.List;
+
+public class CountryListManagerApp {
+
+	public static void main(String[] args) {
+		System.out.println("Welcome to the Country List Manager");
+		CountryIO cio = new CountryIO();
+		String command = "";
+		while(!command.equalsIgnoreCase("4")) {
+			displayCommandMenu();
+			command = Console.getString("Enter menu #: ");
+			if(command.equals("1")) {
+				List<String> countries = cio.getAll();
+				if (countries==null||countries.size()==0) {
+					System.out.println("Countries file doesn't exist. Please enter.");
+				}
+				else {
+					for (String c: countries) {
+					System.out.println(c);
+				}
+				System.out.println();
+			}
+			else if (command.equals("2")) {
+				int id = Console.getInt("Enter Country id: ");
+				String code = Console.getString("Enter country code: ");
+				String name = Console.getString("Enter country name: ");
+				Country c = new Country(id, code, name);
+				if (cio.add(c)) {
+				System.out.println("This country has been saved");
+			}
+			}
+			else {
+				System.out.println("Error adding country.");
+			}
+			System.out.println();
+		}
+		}
+			else if 
+		
+		
+		
+		System.out.println("Bye");
+
+	}
+	
+	private void displayCommandMenu("COMMAND MENU\n" +
+					"1 - List countries\n" + 
+					"2 - Add a country\n" + 
+					"3 - Remove a country\n" +
+					"4 - Exit");
+
+}
