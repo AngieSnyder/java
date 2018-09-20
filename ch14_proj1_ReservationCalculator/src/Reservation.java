@@ -2,6 +2,9 @@ import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.time.temporal.ChronoUnit;
+
+import javax.swing.text.NumberFormatter;
 
 public class Reservation {
 	private LocalDate arrivalDate;
@@ -20,9 +23,9 @@ public class Reservation {
 	}
 	
 	public String getArrivalDateFormatted() {
-		DateTimeFormatter dtf = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG);
-		String formatedDate= dtf.format(arrivalDate);
-		return formatedDate;
+		DateTimeFormatter dtf = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
+		String formattedDate= dtf.format(arrivalDate);
+		return formattedDate;
 		
 	}
 
@@ -35,31 +38,34 @@ public class Reservation {
 	}
 	
 	public String getDepartureDateFormatted() {
-		DateTimeFormatter dtf = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG);
-		String formatedDate= dtf.format(departureDate);
-		return formatedDate;
+		DateTimeFormatter dtf = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
+		String formattedDate= dtf.format(departureDate);
+		return formattedDate;
 	}
 
 	public void setDepartureDate(LocalDate departureDate) {
 		this.departureDate = departureDate;
 	}
 	
-	public int getNumberofNights() {
-		return 0; // need to edit to 0
+	public int getNumberOfNights() {
+		long numOfNights = ChronoUnit.DAYS.between(arrivalDate, departureDate);
+		return (int) numOfNights;
 	}
 
 	public double getTotalPrice() {
-		return 0; // need to edit from 0
+		double totalPrice = (PRICEPERNIGHT * getNumberOfNights());
+		return totalPrice;
 	}
-	public String price(double unfPrice) {
+	public String getPricePerNightFormatted() {
+		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		String ppNight = currency.format(PRICEPERNIGHT);
+		return ppNight;
+	}
+	public String getTotalPriceFormatted() {
 		 NumberFormat currency = NumberFormat.getCurrencyInstance();
-		String priceString = currency.format(unfPrice);
-		return priceString;
+		String totalPriceFormatted = currency.format(getTotalPrice());
+		return totalPriceFormatted;
 	}
-//	public String getPricePerNight() {
-	//	
-		//return this.PRICEPERNIGHT;
-	//}
 
 	@Override
 	public String toString() {
