@@ -4,8 +4,6 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.time.temporal.ChronoUnit;
 
-import javax.swing.text.NumberFormatter;
-
 public class Reservation {
 	private LocalDate arrivalDate;
 	private LocalDate departureDate;

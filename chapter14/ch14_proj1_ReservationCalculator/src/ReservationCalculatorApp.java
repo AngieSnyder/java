@@ -25,7 +25,8 @@ public class ReservationCalculatorApp {
 			System.out.println("Arrival Date: " + reservation.getArrivalDateFormatted());
 			System.out.println("Departure Date: " + reservation.getDepartureDateFormatted());
 			System.out.println("Price: " + reservation.getPricePerNightFormatted());
-			System.out.println("Total Price: " + reservation.getTotalPriceFormatted() + " for " + reservation.getNumberOfNights() + " nights");
+			System.out.println("Total Price: " + reservation.getTotalPriceFormatted() + " for " 
+											+ reservation.getNumberOfNights() + " nights");
 			
 			System.out.println();
 			choice = Console.getString("Continue? (y/n): ");
