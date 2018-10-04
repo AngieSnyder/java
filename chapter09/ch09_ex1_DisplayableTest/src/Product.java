@@ -49,7 +49,6 @@ public class Product implements Displayable {
 
 	@Override
 	public String getDisplayText() {
-		return getDescription();
+		return description;
 	}
-
 }
